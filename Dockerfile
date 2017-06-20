@@ -20,7 +20,8 @@ MAINTAINER Nicolas Albert nicolasa@convertigo.com
 ## Install git-lfs (https://github.com/git-lfs/git-lfs/wiki/Installation)
 
 RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash && \
-    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends git-lfs && \
-    git lfs install && \
+    DEBIAN_FRONTEND=noninteractive apt-get install -y --no-install-recommends\
+    	git-lfs \
+    	maven \
+    && git lfs install && \
     rm -r /var/lib/apt/lists/*
-
